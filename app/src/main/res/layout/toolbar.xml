@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:theme="@style/MyToolbarStyle">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <com.kotlin.kotlinprojectbase.uibase.CustomRegularTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/fev_layoutt"
+            android:layout_toStartOf="@+id/fev_layoutt"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_centerInParent="true"
+            android:text="Home"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:textColor="@color/white" />
+        <FrameLayout
+            android:id="@+id/fev_layoutt"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/cart_layout"
+            android:layout_toStartOf="@+id/cart_layout"
+            android:visibility="gone">
+            <ImageButton
+                android:id="@+id/imageButton_switch"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end" />
+
+            <LinearLayout
+                android:id="@+id/lyt_fev"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.kotlin.kotlinprojectbase.uibase.CustomRegularTextView
+                    android:id="@+id/fev_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:text=""
+                    android:textColor="@color/white"
+                  />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transperant"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_action_notifications_white" />
+                <com.kotlin.kotlinprojectbase.uibase.CustomRegularTextView
+                    android:id="@+id/not_count"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text=""
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+            <ImageButton
+                android:id="@+id/imageButton_logout"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/transperant"
+                android:src="@drawable/ic_shortcut_notifications_none" />
+
+            <LinearLayout
+                android:id="@+id/header_notification"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.kotlin.kotlinprojectbase.uibase.CustomRegularTextView
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:text="11"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
