@@ -20,11 +20,13 @@ internal class CustomFontEditText : EditText {
     }
 
     fun init() {
+
       /* ----------------- uncomment this when you added the font-------------------*/
 
 //        val tf = Typeface.createFromAsset(context.assets, "fonts/Montserrat-Regular.ttf")
  //       setTypeface(tf, 0)
     }
+
 
     //    // method to change font settings
     //    void setTypeface(TypeFace tf) {

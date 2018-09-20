@@ -175,37 +175,6 @@ internal class AppUtils : AppConstant {
         }
 
 
-        /* public static Dialog simpleDialog(final Context context, final String msg) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View notification_view = inflater.inflate(R.layout.dialog_simple_layout, null);
-        simpleDialog = new AlertDialog.Builder(context).create();
-        simpleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        simpleDialog.getWindow().setBackgroundDrawable(
-                new ColorDrawable(Color.TRANSPARENT));
-//        simpleDialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
-
-        simpleDialog.setView(notification_view);
-        simpleDialog.setCancelable(true);
-        simpleDialog.setCanceledOnTouchOutside(false);
-
-        pop_name = (TextView) notification_view.findViewById(R.id.notification_name);
-        pop_text = (TextView) notification_view.findViewById(R.id.notification_text);
-        pop_close = (Button) notification_view.findViewById(R.id.notification_close);
-
-        pop_name.setText(R.string.app_name);
-        pop_name.setTypeface(Typeface.DEFAULT_BOLD);
-        pop_text.setText(msg);
-        pop_close.setText("OK");
-        pop_close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                simpleDialog.dismiss();
-            }
-        });
-        simpleDialog.show();
-        return simpleDialog;
-    }
-*/
         /**
          * To check internet connection
          */

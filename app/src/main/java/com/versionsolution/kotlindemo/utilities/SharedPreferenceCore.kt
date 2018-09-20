@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 open class SharedPreferenceCore {
 
-    private val SHARED_PREFERENCES_NAME = "WBC"
+    private val SHARED_PREFERENCES_NAME = "KotlinDemo"
 
     private val preferences: SharedPreferences?
         get() {

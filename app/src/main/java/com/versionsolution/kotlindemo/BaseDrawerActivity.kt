@@ -95,6 +95,9 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
         toolbar_title = findViewById(R.id.toolbar_title)
         not_count = findViewById(R.id.not_count)
 
+
+/*************uncomment for storing values in shared prefrence***************************/
+
        /* if (SharedPreference.getUserId() == null) {
             not_count.setVisibility(View.GONE)
         } else {
@@ -105,14 +108,11 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
                 .add(R.id.frame_layout, HomeFragment.Companion.newInstance())
                 .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                 .commitAllowingStateLoss();
-        // getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment()).commit();
 
-        //        toolbar.inflateMenu(R.menu.base);
-        //imageButtonMenu = (ImageButton) toolbar.findViewById(R.id.imageButtonMenu);
         imageButton_switch = toolbar.findViewById(R.id.imageButton_switch)
         imageButton_user = toolbar.findViewById(R.id.imageButton_user)
         imageButton_logout = toolbar.findViewById(R.id.imageButton_logout)
-//        search_bar = toolbar.findViewById(R.id.search_bar)
+
         imageView_carky = toolbar.findViewById(R.id.toolbar_title)
         header_notification = toolbar.findViewById(R.id.header_notification)
         lyt_fev = toolbar.findViewById(R.id.lyt_fev)
@@ -121,7 +121,7 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
         imageButton_switch.setOnClickListener(this)
         imageButton_user.setOnClickListener(this)
         imageButton_logout.setOnClickListener(this)
-      //  imageButtonMenu.setOnClickListener(this);
+
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -129,7 +129,7 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
         toolbar.setOnClickListener(this);
 
         imageButton_user?.setOnClickListener(this)
-//        imageButton_logout.setOnClickListener { success_dialog(resources.getString(R.string.logout_alert)) }
+
 
 
 
@@ -137,7 +137,6 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
         fab.setOnClickListener(View.OnClickListener {
             LocaleHelper.setLocale(this, mLanguageCode);
 
-            //It is required to recreate the activity to reflect the change in UI.
             recreate();
         })
 
@@ -277,7 +276,7 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
                          .commitAllowingStateLoss();
              }
             1->{
-                toolbar_title!!.setText(getString(R.string.notifications_drawer));
+                toolbar_title!!.setText(getString(R.string.nav_noti));
                 //setTabTextColor();
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.frame_layout, NotificationFragment.Companion.newInstance())
@@ -312,10 +311,10 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
             5->{
                 val appPackageName = packageName // getPackageName() from Context or Activity object
                 try {
-                   // startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store?hl=en")))
                 } catch (anfe: android.content.ActivityNotFoundException) {
-                    //startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store?hl=en")))
                 }
 
@@ -357,7 +356,7 @@ open class BaseDrawerActivity: BaseActivity(),AdapterView.OnItemClickListener, V
             super.onBackPressed()
             if (flag == 0) {
                 toolbar_title?.setText(resources.getString(R.string.app_name))
-//                setTabTextColor()
+
             } else if (flag == 1) {
                 toolbar_title?.setText(resources.getString(R.string.app_name))
                 flag = 0

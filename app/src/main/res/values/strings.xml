@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Kotlin MVP</string>
+    <string name="nav_about_us">About us</string>
+    <string name="name">Enter your name</string>
+    <string name="feedback_msg">feedback msg</string>
+    <string name="feeback_response">send me a feedback reponse</string>
+    <string name="submit_feedback">submit feedback</string>
+    <string name="nav_noti">Notification</string>
+    <string name="nav_setting">Setting</string>
+    <string name="home">Home</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_rating">Rate a application</string>
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+    <string name="home_drawer">Home</string>
+    <string name="no_internet_message">No internet connection</string>
+</resources>
